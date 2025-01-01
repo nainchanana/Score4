@@ -1,128 +1,114 @@
-Score4
-A modernized implementation of the classic “Connect Four” board game, Score4 combines timeless gameplay with clean, modular code. Players take turns dropping tokens into a vertically suspended grid, aiming to align four tokens before their opponent does. With a user-friendly graphical interface built using Java Swing and robust in-game logic, Score4 balances straightforward rules with strategic depth.
+Score4 is a Java-based adaptation of the classic “Connect Four” board game, reimagined with a 3D twist, an intuitive Swing GUI, and a built-in AI opponent. Through careful architecture and modular design, it offers both casual fun and a clean foundation for further development.
 
-Table of Contents
-Features
-Project Architecture
-Getting Started
-Running the Game
-How to Play
+Contents
+Overview
+Built With
+Setup & Installation
+Usage
+Roadmap
 Contributing
 License
-Credits
-Features
-Clean, Modular Code
-The project follows best practices by separating concerns into logical components such as the board, controller, player classes, and UI elements.
+Contact
+Acknowledgments
+Overview
+Score4 introduces a layered grid where players drop tokens, attempting to align four in a row (horizontally, vertically, or diagonally). One user plays as Player 1 (red), while Player 2 can be controlled by an AI that determines “best moves” to keep the game challenging.
 
-Graphical Interface (Java Swing)
-A user-friendly interface built with Swing, featuring a cover page, a dynamic board panel, and an overlay that announces the winner.
+Key highlights:
 
-AI Opponent
-A built-in AI (Player 2 by default) that calculates the “next best move,” offering a challenge to human players. You can tweak or replace this logic as needed.
+3D Board Layout: Multiple layers, rows, and columns.
+Mouse Interaction: Hover effects and click detection for selecting valid cells.
+AI Integration: Basic algorithm to block or threaten moves, offering single-player excitement.
+Score Tracking: Real-time scoring and a winner overlay.
+Modularity: Classes like BoardPanel, Cell, Controller, and Player are each responsible for distinct parts of the game.
+Built With
+Java (JDK 8 or later)
+Core language for all game logic and GUI components.
+Swing
+Used to build the interactive UI, including windows, buttons, and mouse detection.
+(Feel free to list any additional frameworks or libraries if applicable.)
 
-Scalable Board Size & Rules
-The code is written to handle different grid sizes and winning conditions with minimal refactoring.
-
-Scoring & Replay Features
-Real-time scoring for Player 1 and Player 2, with easy extension points for future replay implementations.
-
-Well-Documented Classes
-Clear JavaDocs and comments throughout the code ensure readability and maintainability.
-
-Project Architecture
-BoardPanel
-
-Handles the graphical representation of the 3D board layers, rows, and columns.
-Detects mouse clicks/movements to place or highlight tokens.
-Manages score updates and winner overlays.
-Cell
-
-Represents each playable cell on the 3D board, storing state (Blank, Occupied, Focused, Won) and which player’s token occupies it.
-Controller
-
-Manages the primary game window (JFrame) and transitions between cover page and main board.
-Handles core logic (start game, reset, and exit).
-CoverPage
-
-The intro screen, prompting the user’s name.
-Allows players to start or quit the game.
-GameState
-
-An enum defining states of each cell: Blank, Occupied, Focused, or Won.
-Move
-
-Contains logic for determining the AI’s optimal move.
-Checks if the human player is about to win, allowing the AI to block them, or chooses a random valid spot otherwise.
-Player
-
-Represents either a Human or an AI player, tracking move counts, player numbers, and the logic to decide moves.
-Position
-
-Simple class holding layer, row, and column to identify a cell in the 3D grid.
-WinningConditions
-
-Examines lines of tokens to detect a winning set of four consecutive pieces in any direction.
-Getting Started
-Clone This Repository
+Setup & Installation
+Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/YourUsername/score4.git
-Open in IntelliJ (or any Java IDE)
+git clone https://github.com/<nainchanana>/Score4.git
+Open in IntelliJ (or Your Preferred IDE)
 
-Select File → Open and navigate to the project folder.
-Ensure your Java SDK is properly configured.
-Project Structure
+Select File → Open and locate the Score4 folder.
+Make sure your Project SDK is set to a valid Java version (e.g., Java 8+).
+Compile & Run
 
-The primary source code resides in src/scoreFourGame/.
-Each class is documented, making it easy to locate relevant functionality.
-Running the Game
-Compile and Run
-If using IntelliJ: Click the green “Run” button next to Main or use the run configuration.
-If using the command line:
+If using IntelliJ, locate the Main class inside src/scoreFourGame and run it directly.
+From the command line (if you prefer):
 bash
 Copy code
-cd src
+cd Score4/src
 javac scoreFourGame/*.java
 java scoreFourGame.Main
-Game Window
-A cover page will appear, prompting for your name.
-Click Start Game to launch the main Score4 board.
-Use the Reset button to clear the board and begin a new match, or Exit to quit.
-How to Play
-Object of the Game
+Optional: Update the Remote
+If you forked this code, point the repository to your own GitHub path:
 
-Drop tokens (red for Player 1, blue for Player 2) into columns, aiming to connect four in any direction (horizontal, vertical, or diagonal).
-Turns
+bash
+Copy code
+git remote set-url origin https://github.com/<nainchanana>/Score4.git
+Usage
+Launch the Game: After running Main, a cover page appears, prompting for a player name.
+Start Game: Player 1 is human (red tokens). Player 2 is an AI (blue tokens).
+Objective: Drop tokens to form a line of four. Use strategy to block your opponent and create multiple potential wins.
+Reset or Exit: The bottom panel features buttons to reset the current board or close the application.
+Tip: Modify BoardPanel constants (like TOTAL_LAYERS, TOTAL_ROWS, TOTAL_COLUMNS) to experiment with different board dimensions.
 
-Players alternate placing a token each turn.
-Player 1 is controlled by the user; Player 2 is an AI by default.
-Winning
+Roadmap
+AI Difficulty Levels: Introduce multiple AI strategies (e.g., easy, medium, hard).
+Online Multiplayer: Explore networking for player vs. player matches across the internet.
+Visual Themes: Offer custom backgrounds or token designs.
+Replay Mode: Track moves and allow players to review an entire match.
+Check the Issues section to see what’s in progress or propose new ideas.
 
-If four consecutive tokens of the same color align, the overlay announces the winner, and scoring updates accordingly.
-Tips
-
-Block your opponent’s attempts to connect four.
-Look for ways to create multiple threats at once.
 Contributing
-Contributions are welcome! Here’s how you can help:
+Contributions are always welcome! Here’s how you can help:
 
-Fork the repository and clone it locally.
-Create a Feature Branch for your changes (e.g., feature/improve-ai).
-Commit and Push your work to your branch.
-Open a Pull Request against the main branch.
-Provide a clear description of your proposed changes and any relevant context.
+Fork the Repo
+Create your own copy on GitHub.
+Create a New Branch
+bash
+Copy code
+git checkout -b feature/<YourFeatureName>
+Commit Your Work
+bash
+Copy code
+git commit -m "Add <nainchanana>"
+Push the Branch
+bash
+Copy code
+git push origin feature/<nainchanana>
+Open a Pull Request
+Describe your changes, link any relevant issues, and submit for review.
+Stars, issues, and feature requests are also appreciated!
+
 License
-This project is licensed under an open license (e.g., MIT License). Feel free to modify, distribute, or use this code in your own projects. Refer to the LICENSE file (if provided) for more details.
+Feel free to specify an open-source license that best suits your needs (e.g., MIT, Apache 2.0, Unlicense). For instance:
 
-Credits
-Team Grizzly Claw:
+This project is distributed under the MIT License.
 
-Nainpreet Kaur
-Krishi Patel
-Mayank Chawda
-Raj Vimal Talaviya
-Samprat Upadhyay
-Their collective effort in conceptualizing and implementing Score4 is reflected in this source code.
+Check the LICENSE file (if present) or add one to clarify usage rights.
 
-Thank you for checking out Score4. We hope this game provides both an entertaining experience and a hands-on guide to clean, maintainable Java software design! If you have any questions, issues, or suggestions, feel free to open an Issue or reach out through a Pull Request. Enjoy the game!
+Contact
+Your Name
+Email: kaurnainpreet22@gmail.com
+GitHub: @nainchanana
+Acknowledgments
+Team Grizzly Claw (or any other collaborators) for coding and conceptual support.
+Open Source Java Tutorials for guidance on GUI design.
+Java Swing documentation for ensuring robust UI creation.
+(Add or remove items here to credit resources, libraries, or mentors who helped shape the project.)
+
+Thank you for checking out Score4! Enjoy the game, and don’t hesitate to submit a pull request or open an issue if you have suggestions or run into any problems.
+
+
+
+
+
+
+
