@@ -52,7 +52,8 @@ If you forked this code, point the repository to your own GitHub path:
 
 bash
 Copy code
-git remote set-url origin https://github.com/<nainchanana>/Score4.git
+git remote set-url origin https://github.com/nainchanana/Score4
+
 Usage
 Launch the Game: After running Main, a cover page appears, prompting for a player name.
 Start Game: Player 1 is human (red tokens). Player 2 is an AI (blue tokens).
@@ -73,21 +74,6 @@ Contributions are always welcome! Here’s how you can help:
 Fork the Repo
 Create your own copy on GitHub.
 Create a New Branch
-bash
-Copy code
-git checkout -b feature/<YourFeatureName>
-Commit Your Work
-bash
-Copy code
-git commit -m "Add <nainchanana>"
-Push the Branch
-bash
-Copy code
-git push origin feature/<nainchanana>
-Open a Pull Request
-Describe your changes, link any relevant issues, and submit for review.
-Stars, issues, and feature requests are also appreciated!
-
 
 Contact
 Nainpreet Kaur
