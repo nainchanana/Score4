@@ -28,11 +28,12 @@ Used to build the interactive UI, including windows, buttons, and mouse detectio
 (Feel free to list any additional frameworks or libraries if applicable.)
 
 Setup & Installation
-Clone the Repository
+
+Clone the Repository https://github.com/nainchanana/Score4
 
 bash
 Copy code
-git clone https://github.com/<nainchanana>/Score4.git
+git clone https://github.com/nainchanana/Score4
 Open in IntelliJ (or Your Preferred IDE)
 
 Select File → Open and locate the Score4 folder.
@@ -87,23 +88,11 @@ Open a Pull Request
 Describe your changes, link any relevant issues, and submit for review.
 Stars, issues, and feature requests are also appreciated!
 
-License
-Feel free to specify an open-source license that best suits your needs (e.g., MIT, Apache 2.0, Unlicense). For instance:
-
-This project is distributed under the MIT License.
-
-Check the LICENSE file (if present) or add one to clarify usage rights.
 
 Contact
-Your Name
+Nainpreet Kaur
 Email: kaurnainpreet22@gmail.com
 GitHub: @nainchanana
-Acknowledgments
-Team Grizzly Claw (or any other collaborators) for coding and conceptual support.
-Open Source Java Tutorials for guidance on GUI design.
-Java Swing documentation for ensuring robust UI creation.
-(Add or remove items here to credit resources, libraries, or mentors who helped shape the project.)
-
 Thank you for checking out Score4! Enjoy the game, and don’t hesitate to submit a pull request or open an issue if you have suggestions or run into any problems.
 
 
